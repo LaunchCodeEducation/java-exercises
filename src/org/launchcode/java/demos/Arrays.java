@@ -10,6 +10,9 @@ public class Arrays {
         System.out.println("printArrayOfNumbers :: ");
         printArrayOfNumbers();
 
+        System.out.println("arrayCreation :: ");
+        arrayCreation();
+
     }
 
     public static void printArrayOfNumbers() {
@@ -31,8 +34,14 @@ public class Arrays {
         // Declare and initialize an array using an array literal
         Integer[] someOtherInts = {1, 1, 2, 3, 5, 8};
 
-        for (Integer i : someInts) {
+        // We can use a for-in loop with arrays
+        for (int i : someInts) {
             System.out.println(i);
+        }
+
+        // We can loop through an array with an iterator var as well
+        for (int j : someOtherInts) {
+            System.out.println(j);
         }
 
 
