@@ -6,7 +6,7 @@ package org.launchcode.java.demos.java4python.methods;
 public class HelloMethods {
 
     public static void main(String[] args) {
-        String message = Message.GetMessage("fr");
+        String message = Message.getMessage("fr");
         System.out.println(message);
     }
 }
