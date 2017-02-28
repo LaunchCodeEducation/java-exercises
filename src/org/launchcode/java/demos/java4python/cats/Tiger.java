@@ -6,7 +6,7 @@ package org.launchcode.java.demos.java4python.cats;
 public class Tiger extends Cat {
 
 
-    public Boolean angry() {
+    public boolean angry() {
         return this.tired && this.hungry;
     }
 

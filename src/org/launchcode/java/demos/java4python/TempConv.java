@@ -7,8 +7,8 @@ import java.util.Scanner;
  */
 public class TempConv {
     public static void main(String[] args) {
-        Double fahrenheit;
-        Double celsius;
+        double fahrenheit;
+        double celsius;
         Scanner in;
 
         in = new Scanner(System.in);

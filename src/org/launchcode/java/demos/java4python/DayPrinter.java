@@ -10,7 +10,7 @@ public class DayPrinter {
 
         System.out.println("Enter a integer: ");
         Scanner in = new Scanner(System.in);
-        Integer dayNum = in.nextInt();
+        int dayNum = in.nextInt();
 
         String day;
         switch (dayNum) {

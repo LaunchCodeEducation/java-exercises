@@ -8,54 +8,54 @@ import java.util.Collections;
  */
 public class Fraction extends Number implements Comparable<Fraction> {
 
-    private Integer numerator;
-    private Integer denominator;
+    private int numerator;
+    private int denominator;
 
     /** Creates a new instance of Fraction */
-    public Fraction(Integer num, Integer den) {
+    public Fraction(int num, int den) {
         this.numerator = num;
         this.denominator = den;
     }
 
-    public Fraction(Integer num) {
+    public Fraction(int num) {
         this.numerator = num;
         this.denominator = 1;
     }
 
     public Fraction add(Fraction other) {
-        Integer newNum = other.getDenominator()*this.numerator + this.denominator*other.getNumerator();
-        Integer newDen = this.denominator * other.getDenominator();
-        Integer common = gcd(newNum,newDen);
+        int newNum = other.getDenominator()*this.numerator + this.denominator*other.getNumerator();
+        int newDen = this.denominator * other.getDenominator();
+        int common = gcd(newNum,newDen);
         return new Fraction(newNum/common, newDen/common );
     }
 
-    public Fraction add(Integer other) {
+    public Fraction add(int other) {
         return add(new Fraction(other));
     }
 
-    public Integer getNumerator() {
+    public int getNumerator() {
         return numerator;
     }
 
-    public void setNumerator(Integer numerator) {
+    public void setNumerator(int numerator) {
         this.numerator = numerator;
     }
 
-    public Integer getDenominator() {
+    public int getDenominator() {
         return denominator;
     }
 
-    public void setDenominator(Integer denominator) {
+    public void setDenominator(int denominator) {
         this.denominator = denominator;
     }
 
     public String toString() {
-        return numerator.toString() + "/" + denominator.toString();
+        return String.valueOf(numerator) + "/" + String.valueOf(denominator);
     }
 
     public boolean equals(Fraction other) {
-        Integer num1 = this.numerator * other.getDenominator();
-        Integer num2 = this.denominator * other.getNumerator();
+        int num1 = this.numerator * other.getDenominator();
+        int num2 = this.denominator * other.getNumerator();
         if (num1 == num2)
             return true;
         else
@@ -63,31 +63,31 @@ public class Fraction extends Number implements Comparable<Fraction> {
     }
 
     public double doubleValue() {
-        return numerator.doubleValue() / denominator.doubleValue();
+        return Double.valueOf(numerator) / Double.valueOf(denominator);
     }
 
     public float floatValue() {
-        return numerator.floatValue() / denominator.floatValue();
+        return Float.valueOf(numerator) / Float.valueOf(denominator);
     }
 
     public int intValue() {
-        return numerator.intValue() / denominator.intValue();
+        return numerator / denominator;
     }
 
     public long longValue() {
-        return numerator.longValue() / denominator.longValue();
+        return Long.valueOf(numerator) / Long.valueOf(denominator);
     }
 
     public int compareTo(Fraction other) {
-        Integer num1 = this.numerator * other.getDenominator();
-        Integer num2 = this.denominator * other.getNumerator();
+        int num1 = this.numerator * other.getDenominator();
+        int num2 = this.denominator * other.getNumerator();
         return num1 - num2;
     }
 
-    private static Integer gcd(Integer m, Integer n) {
+    private static int gcd(int m, int n) {
         while (m % n != 0) {
-            Integer oldm = m;
-            Integer oldn = n;
+            int oldm = m;
+            int oldn = n;
             m = oldn;
             n = oldm%oldn;
         }

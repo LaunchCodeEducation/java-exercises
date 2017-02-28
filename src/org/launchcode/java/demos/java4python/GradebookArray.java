@@ -14,7 +14,7 @@ public class GradebookArray {
         int maxStudents = 30;
 
         String[] students = new String[maxStudents];
-        Double[] grades = new Double[maxStudents];
+        double[] grades = new double[maxStudents];
         Scanner in = new Scanner(System.in);
 
         String newStudent;
@@ -37,20 +37,20 @@ public class GradebookArray {
         // Get student grades
         for (int i = 0; i < numStudents; i++) {
             System.out.print("Grade for " + students[i] + ": ");
-            Double grade = in.nextDouble();
+            double grade = in.nextDouble();
             grades[i] = grade;
         }
 
         // Print class roster
         System.out.println("\nClass roster:");
-        Double sum = 0.0;
+        double sum = 0.0;
 
         for (int i = 0; i < numStudents; i++) {
             System.out.println(students[i] + " (" + grades[i] + ")");
             sum += grades[i];
         }
 
-        Double avg = sum / numStudents;
+        double avg = sum / numStudents;
         System.out.println("Average grade: " + avg);
     }
 

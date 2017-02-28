@@ -36,14 +36,14 @@ public class GradebookHashMap {
 
         // Print class roster
         System.out.println("\nClass roster:");
-        Double sum = 0.0;
+        double sum = 0.0;
 
         for (Map.Entry<String, Double> student : students.entrySet()) {
             System.out.println(student.getKey() + " (" + student.getValue() + ")");
             sum += student.getValue();
         }
 
-        Double avg = sum / students.size();
+        double avg = sum / students.size();
         System.out.println("Average grade: " + avg);
     }
 

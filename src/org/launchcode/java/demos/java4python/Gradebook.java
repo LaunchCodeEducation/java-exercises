@@ -36,14 +36,14 @@ public class Gradebook {
 
         // Print class roster
         System.out.println("\nClass roster:");
-        Double sum = 0.0;
+        double sum = 0.0;
 
         for (int i = 0; i < students.size(); i++) {
             System.out.println(students.get(i) + " (" + grades.get(i) + ")");
             sum += grades.get(i);
         }
 
-        Double avg = sum / students.size();
+        double avg = sum / students.size();
         System.out.println("Average grade: " + avg);
     }
 

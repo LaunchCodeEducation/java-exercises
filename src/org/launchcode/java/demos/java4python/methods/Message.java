@@ -8,11 +8,11 @@ public class Message {
     public static String getMessage(String lang) {
 
         if (lang.equals("sp")) {
-            return "Hello World";
+            return "Hola Mundo";
         } else if (lang.equals("fr")) {
             return "Bonjour le monde";
         } else {
-            return "Hola Mundo";
+            return "Hello World";
         }
     }
 }

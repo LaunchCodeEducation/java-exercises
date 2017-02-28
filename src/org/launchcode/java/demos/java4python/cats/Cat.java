@@ -7,8 +7,8 @@ public class Cat {
 
     // We set these parameters to "protected" so all classes in the same package
     // along with all subclasses may access them
-    protected Boolean tired = true;
-    protected Boolean hungry = true;
+    protected boolean tired = true;
+    protected boolean hungry = true;
 
     // A cat is rested and hungry after it sleeps
     public void sleep() {

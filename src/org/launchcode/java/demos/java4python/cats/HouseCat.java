@@ -14,7 +14,7 @@ public class HouseCat extends Cat {
         this.name = name;
     }
 
-    public Boolean satisfied() {
+    public boolean satisfied() {
         return !this.hungry && !this.tired;
     }
 
