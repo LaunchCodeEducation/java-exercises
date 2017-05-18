@@ -7,9 +7,8 @@ import java.util.Scanner;
  */
 public class DayPrinter {
     public static void main(String[] args) {
-
-        System.out.println("Enter a integer: ");
         Scanner in = new Scanner(System.in);
+        System.out.println("Enter an integer: ");
         int dayNum = in.nextInt();
 
         String day;
