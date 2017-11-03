@@ -5,20 +5,25 @@ import java.util.Scanner;
 public class Area {
 
     private static final double PI = 3.14;
+    private static boolean validRadius = false;
 
-    private static boolean isNotValidRadius(double radius) {
-        return (radius < 0);
+    private static void validateRadius(double radius) {
+        if (radius >= 0) {
+            validRadius = true;
+        } else {
+            System.out.println("Not a valid radius!");
+        }
     }
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter a radius:");
-        double radius = scanner.nextDouble();
-        if (isNotValidRadius(radius)) {
-            System.out.println("Not a valid radius!");
-        } else {
-            double area = PI * Math.pow(radius, 2);
-            System.out.println("The area of a circle of radius " + radius + " is: " + area);
-        }
+        double radius;
+        do {
+            System.out.println("Enter a radius:");
+            radius = scanner.nextDouble();
+            validateRadius(radius);
+        } while (!validRadius);
+        double area = PI * Math.pow(radius, 2);
+        System.out.println("The area of a circle of radius " + radius + " is: " + area);
     }
 }
