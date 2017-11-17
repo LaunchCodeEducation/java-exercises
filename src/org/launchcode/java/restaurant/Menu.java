@@ -39,4 +39,10 @@ public class Menu {
         System.out.println(sdf.format(lastUpdated));
     }
 
+    private void addNewMenuItems(List<MenuItem> menuItems) {
+        for (MenuItem menuItem : this.menuItems) {
+            menuItem.setNew(false);
+        }
+        this.menuItems.addAll(menuItems);
+    }
 }
