@@ -24,6 +24,7 @@ public class MenuRunner {
                 .setDescription("Cold and sweet chocolate flavor")
                 .setPrice(2.99);
 
+        System.out.println(menu.displaySimpleDate());
     }
 
 }

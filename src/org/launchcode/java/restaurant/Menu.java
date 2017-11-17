@@ -63,4 +63,8 @@ public class Menu {
             this.menuItems.removeAll(menuItems);
         }
     }
+
+    public String displaySimpleDate() {
+        return sdf.format(lastUpdated);
+    }
 }
