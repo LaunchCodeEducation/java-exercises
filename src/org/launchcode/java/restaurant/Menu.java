@@ -35,7 +35,7 @@ public class Menu {
         return this;
     }
 
-    private void printLastUpdated(){
+    private void printLastUpdated() {
         System.out.println(sdf.format(lastUpdated));
     }
 
@@ -48,10 +48,19 @@ public class Menu {
 
     private void removeMenuItem(MenuItem menuItem) {
         if (!this.menuItems.contains(menuItem)) {
-            throw new IllegalArgumentException("The menu item is not in the list!");
+            throw new IllegalArgumentException("The menu item is not on the menu!");
         }
 
         this.menuItems.remove(menuItem);
     }
 
+    private void removeMenuItems(List<MenuItem> menuItems) {
+        for (MenuItem menuItem : menuItems) {
+            if (!this.menuItems.contains(menuItem)) {
+                throw new IllegalArgumentException("There is a menu item that is not on the menu");
+            }
+
+            this.menuItems.removeAll(menuItems);
+        }
+    }
 }
