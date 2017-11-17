@@ -45,4 +45,13 @@ public class Menu {
         }
         this.menuItems.addAll(menuItems);
     }
+
+    private void removeMenuItem(MenuItem menuItem) {
+        if (!this.menuItems.contains(menuItem)) {
+            throw new IllegalArgumentException("The menu item is not in the list!");
+        }
+
+        this.menuItems.remove(menuItem);
+    }
+
 }
