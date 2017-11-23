@@ -39,14 +39,21 @@ public class Menu {
         System.out.println(sdf.format(lastUpdated));
     }
 
-    private void addNewMenuItems(List<MenuItem> menuItems) {
+    public void addNewMenuItem(MenuItem menuItem) {
+        for (MenuItem item : menuItems) {
+            item.setNew(false);
+        }
+        menuItems.add(menuItem);
+    }
+
+    public void addNewMenuItems(List<MenuItem> menuItems) {
         for (MenuItem menuItem : this.menuItems) {
             menuItem.setNew(false);
         }
         this.menuItems.addAll(menuItems);
     }
 
-    private void removeMenuItem(MenuItem menuItem) {
+    public void removeMenuItem(MenuItem menuItem) {
         if (!this.menuItems.contains(menuItem)) {
             throw new IllegalArgumentException("The menu item is not on the menu!");
         }
@@ -54,7 +61,7 @@ public class Menu {
         this.menuItems.remove(menuItem);
     }
 
-    private void removeMenuItems(List<MenuItem> menuItems) {
+    public void removeMenuItems(List<MenuItem> menuItems) throws IllegalArgumentException {
         for (MenuItem menuItem : menuItems) {
             if (!this.menuItems.contains(menuItem)) {
                 throw new IllegalArgumentException("There is a menu item that is not on the menu");
@@ -66,5 +73,23 @@ public class Menu {
 
     public String displaySimpleDate() {
         return sdf.format(lastUpdated);
+    }
+
+    public void printMenuItem(MenuItem menuItem) {
+        System.out.println(menuItem);
+
+    }
+
+    public void printMenu() {
+        StringBuilder menuString = new StringBuilder();
+        String lineBreak = "\n**********\n";
+        String time = "Menu last updated at " + displaySimpleDate();
+        menuString.append(time + lineBreak);
+
+        for (MenuItem menuItem : menuItems) {
+            menuString.append(menuItem);
+            menuString.append(lineBreak);
+        }
+        System.out.println(menuString);
     }
 }

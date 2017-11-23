@@ -1,5 +1,8 @@
 package org.launchcode.java.restaurant;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.launchcode.java.restaurant.Category.APPETIZER;
 import static org.launchcode.java.restaurant.Category.DESSERT;
 import static org.launchcode.java.restaurant.Category.MAIN_COURSE;
@@ -8,6 +11,7 @@ public class MenuRunner {
 
     public static void main(String[] args) {
         Menu menu = new Menu();
+        Menu veganMenu = new Menu();
 
         MenuItem carrots = new MenuItem();
         carrots.setCategory(APPETIZER)
@@ -24,7 +28,18 @@ public class MenuRunner {
                 .setDescription("Cold and sweet chocolate flavor")
                 .setPrice(2.99);
 
-        System.out.println(menu.displaySimpleDate());
+        List<MenuItem> newMenuItems = new ArrayList<>();
+        newMenuItems.add(carrots);
+        newMenuItems.add(steak);
+
+        menu.addNewMenuItems(newMenuItems);
+        menu.printMenu();
+
+        menu.addNewMenuItem(iceCream);
+        MenuItem thing = new MenuItem().setDescription("yep").setCategory(APPETIZER);
+  //      menu.removeMenuItem(thing);
+
+        menu.printMenu();
     }
 
 }
