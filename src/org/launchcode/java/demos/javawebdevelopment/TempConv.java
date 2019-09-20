@@ -1,9 +1,9 @@
-package org.launchcode.java.demos.java4python;
+package org.launchcode.java.demos.javawebdevelopment;
 
 import java.util.Scanner;
 
 /**
- * From "Java for Python Programmers"
+ * From "Java Web Development"
  */
 public class TempConv {
     public static void main(String[] args) {

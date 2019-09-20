@@ -1,7 +1,7 @@
-package org.launchcode.java.demos.java4python;
+package org.launchcode.java.demos.javawebdevelopment;
 
 /**
- * From "Java for Python Programmers"
+ * From "Java Web Development"
  */
 public class Hello {
     public static void main(String[] args) {

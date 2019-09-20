@@ -1,7 +1,7 @@
-package org.launchcode.java.demos.java4python;
+package org.launchcode.java.demos.javawebdevelopment;
 
 /**
- * From "Java for Python Programmers"
+ * From "Java Web Development"
  */
 import java.util.Scanner;
 public class ElseIf {

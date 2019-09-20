@@ -1,4 +1,4 @@
-package org.launchcode.java.demos.java4python.cats;
+package org.launchcode.java.demos.javawebdevelopment.cats;
 
 /**
  * Created by LaunchCode
